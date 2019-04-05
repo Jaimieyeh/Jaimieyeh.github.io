@@ -1,24 +1,18 @@
 <html>
-    <div id="gotop"></div>
+    <a href="#top" id="gotop">︽</a>
     <script src="js/jquery.min.js">
-        $(function () {
-    var $win = $(window);
-    var $backToTop = $('.js-back-to-top');
-
-    $win.scroll(function() {
-      if ($win.scrollTop() > 300) {
-        $backToTop.show();
-      } else {
-        $backToTop.hide();
-      }
-    });
-
-    $backToTop.click(function() {
-      $('html, body').animate({scrollTop: 0}, 200);
-    });
-  });
-                
-
+        $("#gotop").click(function(){
+    jQuery("html,body").animate({
+        scrollTop:0
+    },1000);
+});
+$(window).scroll(function() {
+    if ( $(this).scrollTop() > 300){
+        $('#gotop').fadeIn("fast");
+    } else {
+        $('#gotop').stop().fadeOut("fast");
+    }
+});
     </script>
  
     <style>
