@@ -1,5 +1,25 @@
 <html>
-    <style>
+    <script>
+        $(document).ready(function(){
+            $("div").on("scroll", function() { 
+                if ($("div").scrollTop() > 0) { 
+                    $("#totop").fadeIn();
+                }
+                else {
+                    $("#totop").fadeOut();
+                }
+            });
+            $("#totop").on("click", function() {
+    	   $("div").animate({ scrollTop: 0 }, "slow");
+            });
+        });
+     </script>
+    
+     <style>
+         <button id='totop' style='display:none; position:fixed; bottom:20px; right:0px; font-size: large'>^</button>
+         <div style="border:1px solid black;width:100px;height:150px;overflow:auto"><br></div>
+    </style>
+    <style>    
         .thick-white-border {
             border-color: white;
             border-width: 10px;
@@ -41,8 +61,8 @@
         <h1 align="center">The days I was in Bangladesh</h1>
         <h2 align="center" class="darkslategrey-background white-text">About Bangladesh</h2>
         <font size="10" >
-        <table border="0">
-            <tr>
+        <table border="0" align="center">
+            <tr align="center">
                 <td>
                     <div align="left" class="lightyellow-box">
                     
@@ -60,7 +80,7 @@
                     </ul>
                     </div>
                 </td>
-                <td align="right" valign="center">
+                <td valign="center">
                     <a href="https://www.google.com/search?q=bangladesh&client=firefox-b-d&source=lnms&tbm=isch&sa=X&ved=0ahUKEwi9752Kn4bhAhUM77wKHb30BKUQ_AUIDygC&biw=1280&bih=607&dpr=1.5" target="_blank" title="更多孟加拉圖片">
                     <img align="right" src="https://i.screenshot.net/99nrmfr" width="620" height="465" alt="Welcome to Bangladesh">
                     </a>
@@ -175,9 +195,8 @@
             <input type="text" placeholder="Bangladesh photo URL" required>
             <button type="Submit">Submit</button>
         </form>
-            
-        <button type="button" id="BackTop" class="toTop-arrow" style="display: inline-block; opacity: 0.6;"></button>
         
+      
     </body>
 </html>
 
