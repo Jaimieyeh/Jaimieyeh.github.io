@@ -1,24 +1,18 @@
 <html>
     <script>
-        $(document).ready(function(){
-            $("div").on("scroll", function() { 
-                if ($("div").scrollTop() > 0) { 
-                    $("#totop").fadeIn();
-                }
-                else {
-                    $("#totop").fadeOut();
-                }
+        $(function(){
+	       $('#BackTop').click(function(){ 
+               $('html,body').animate({scrollTop:0}, 333);
             });
-            $("#totop").on("click", function() {
-    	   $("div").animate({ scrollTop: 0 }, "slow");
+                $(window).scroll(function() {
+                    if ( $(this).scrollTop() > 300 ){
+                $('#BackTop').fadeIn(222);
+                    } else {
+                        $('#BackTop').stop().fadeOut(222);
+                    }
+                }).scroll();
             });
-        });
-     </script>
-    
-     <style>
-         <button id='totop' style='display:none; position:fixed; bottom:20px; right:0px; font-size: large'>^</button>
-         <div style="border:1px solid black;width:100px;height:150px;overflow:auto"><br></div>
-    </style>
+        </script>
     <style>    
         .thick-white-border {
             border-color: white;
@@ -196,6 +190,8 @@
             <button type="Submit">Submit</button>
         </form>
         
+        <button type="button" id="BackTop" class="toTop-arrow"></button>
+
       
     </body>
 </html>
