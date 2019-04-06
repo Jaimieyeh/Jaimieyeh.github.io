@@ -1,7 +1,7 @@
 <html>
     <a href="#top" id="gotop">︽</a>
     <script src="js/jquery.min.js">
-        $("#gotop").click(function(){
+       $("#gotop").click(function(){
     jQuery("html,body").animate({
         scrollTop:0
     },1000);
@@ -14,6 +14,20 @@ $(window).scroll(function() {
     }
 });
     </script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+		$(document).ready(function(){
+  		$("#hide").click(function(){
+  		  $("section").hide();
+ 		 });
+ 		 $("#show").click(function(){
+   		 $("section").show();
+  		});
+		});
+	</script>
+	<button id="hide">Hide</button>
+	<button id="show">Show</button>
  
     <style>
         #gotop {
@@ -69,6 +83,7 @@ $(window).scroll(function() {
     <body background="https://incredibledeshbangla.files.wordpress.com/2015/05/cox_bazar_sea_beach2.jpg">
         <h1 align="center">The days I was in Bangladesh</h1>
         <h2 align="center" class="darkslategrey-background white-text">About Bangladesh</h2>
+        <section>
         <font size="10" >
         <table border="0" align="center">
             <tr align="center">
@@ -104,9 +119,10 @@ $(window).scroll(function() {
         <a href="https://zh.wikipedia.org/wiki/%E5%AD%9F%E5%8A%A0%E6%8B%89%E5%9B%BD" target="_blank" title="孟加拉的維基百科">Bangladesh</a> 
         </p>
         </div>
-        
+        </section>
         
         <h2 align="center" class="darkslategrey-background white-text">Local Views</h2>
+        <section>
         <table border="0">
             <tr>
                 <td align="center" valign="center">
@@ -118,8 +134,10 @@ $(window).scroll(function() {
                 </td>
             </tr>
         </table>
+        </section>
         
         <h2 align="center" class="darkslategrey-background white-text">What we are doing</h2>
+        <section>
         
         <div align="center" class="mistyrose-background">
             <form>
@@ -169,8 +187,10 @@ $(window).scroll(function() {
                 </td>
             </tr>
         </table>
+        </section>
         
         <h2 align="center" class="darkslategrey-background white-text">Cute children</h2><br>
+        <section>
         <table border="0">
             <tr>
                 <td align="center" valign="center">
@@ -180,9 +200,12 @@ $(window).scroll(function() {
                 </td>
             </tr>
         </table>
+        </section>
         
         <h2 align="center" class="darkslategrey-background white-text">Feedback</h2><br>
+        <section>
         <h3 class="mistyrose-background">在孟加拉的這短短半個月大大地改變了我許多見解，也開拓了我的眼界。生活在如此貧困的地區，當地居民卻一點也不怨天尤人，反倒過著積極、樂觀的生活，對人更是親切友善，非常值得我們效仿!而我也學會珍惜我所擁有的。在孟加拉，佔多數的人是沒有機會學習的，更沒有所謂的網路或手機供他們娛樂，因此未來，希望我能在能力範圍內，盡一切努力讓當地人有更多機會學習，並能再次去孟加拉與當地人相處~</h3>
+        </section>
         
         
         <h1 align="center" class="cornflowerblue-background white-text">Thanks to YMCA!!!</h1>
